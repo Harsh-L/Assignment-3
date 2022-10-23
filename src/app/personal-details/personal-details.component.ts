@@ -9,7 +9,9 @@ export class PersonalDetailsComponent implements OnInit {
 
   constructor() { }
 
+  
   ngOnInit(): void {
+
   }
 
 }
