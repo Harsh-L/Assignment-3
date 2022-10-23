@@ -7,6 +7,7 @@ import { IntStrDateComponent } from './int-str-date/int-str-date.component';
 import { ArrayInListComponent } from './array-in-list/array-in-list.component';
 import { ArrayInComboComponent } from './array-in-combo/array-in-combo.component';
 import { TextBoxAreaComponent } from './text-box-area/text-box-area.component';
+import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 
 
 const appRoutes = [
@@ -23,7 +24,8 @@ const appRoutes = [
     IntStrDateComponent,
     ArrayInListComponent,
     ArrayInComboComponent,
-    TextBoxAreaComponent
+    TextBoxAreaComponent,
+    PersonalDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(
