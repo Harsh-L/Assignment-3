@@ -1,7 +1,7 @@
 <html>
     <body>
         <label for=""> Select Input Type </label>
-        <select name="text_data" id="text_data" >
+        <select name="text_data" id="text_data" (change)="showInput($input)" >
             <option value="textbox" >Text Box</option>
             <option value="textarea" >Text Area</option>
         </select>
