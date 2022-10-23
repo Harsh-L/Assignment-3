@@ -10,9 +10,11 @@ import { TextBoxAreaComponent } from './text-box-area/text-box-area.component';
 
 
 const appRoutes = [
+  {path: '', component: AppRoutingModule},
   {path: 'int-str-date', component: IntStrDateComponent},
   {path: 'array-in-list', component: ArrayInListComponent},
-  {path: 'array-in-combo', component: ArrayInComboComponent}
+  {path: 'array-in-combo', component: ArrayInComboComponent},
+  {path: 'text-box-area', component: TextBoxAreaComponent}
 ]
 
 @NgModule({
