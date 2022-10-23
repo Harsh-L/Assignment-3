@@ -15,7 +15,8 @@ const appRoutes = [
   {path: 'int-str-date', component: IntStrDateComponent},
   {path: 'array-in-list', component: ArrayInListComponent},
   {path: 'array-in-combo', component: ArrayInComboComponent},
-  {path: 'text-box-area', component: TextBoxAreaComponent}
+  {path: 'text-box-area', component: TextBoxAreaComponent},
+  {path: 'personal-details', component: PersonalDetailsComponent}
 ]
 
 @NgModule({
