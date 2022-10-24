@@ -11,7 +11,7 @@ import { PersonalDetailsComponent } from './personal-details/personal-details.co
 
 
 const appRoutes = [
-  {path: '', component: AppRoutingModule},
+  {path: '*', component: AppRoutingModule},
   {path: 'int-str-date', component: IntStrDateComponent},
   {path: 'array-in-list', component: ArrayInListComponent},
   {path: 'array-in-combo', component: ArrayInComboComponent},
