@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextBoxAreaComponent implements OnInit {
 
-  isTextbox: boolean = false;
+  isTextbox: boolean = true;
   showInput(event: any){
-    let selected_input = event?.target.value;
+    let selected_input = event.target.value;
     if( selected_input == "textbox"){
       this.isTextbox = true;
     }else{
