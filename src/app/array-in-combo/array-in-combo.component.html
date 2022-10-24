@@ -1,7 +1,8 @@
 <html>
     <body>
-        <ul *ngFor="let data of array_data">
-            <li>{{data}}</li>
-        </ul>
+        <label for="numberSelec">Select Number </label> <br> <br>
+        <select name="numberSelect" id="numberSelect">
+            <option value="{{data}}" *ngFor="let data of array_data">{{data}}</option>
+        </select>
     </body>
 </html>

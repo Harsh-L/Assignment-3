@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PersonalDetailsComponent implements OnInit {
 
   constructor() { }
-
-  
+  display=false;
+  name:String = ''; 
   ngOnInit(): void {
 
   }
