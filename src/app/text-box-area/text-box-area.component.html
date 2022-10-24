@@ -1,17 +1,19 @@
 <html>
     <body>
-        <label for=""> Select Input Type </label>
-        <select name="text_data" id="text_data" (change)="showInput($event)" >
-            <option value="textbox" selected >Text Box</option>
-            <option value="textarea" >Text Area</option>
-        </select>
-        <br>
-        <br>
-        <div *ngIf="isTextbox">
-            <input type="text" name="txtbox" id="txtbox" placeholder="Textbox">
-        </div>
-        <div *ngIf="!isTextbox">
-            <textarea name="txtarea" id="txtarea" cols="19" rows="3" placeholder="Textarea"></textarea>
+        <div align="center">
+            <label for=""> Select Input Type </label>
+            <select name="text_data" id="text_data" (change)="showInput($event)" >
+                <option value="textbox" selected >Text Box</option>
+                <option value="textarea" >Text Area</option>
+            </select>
+            <br>
+            <br>
+            <div *ngIf="isTextbox">
+                <input type="text" name="txtbox" id="txtbox" placeholder="Textbox">
+            </div>
+            <div *ngIf="!isTextbox">
+                <textarea name="txtarea" id="txtarea" cols="19" rows="3" placeholder="Textarea"></textarea>
+            </div>
         </div>
     </body>
 </html>
