@@ -1,5 +1,5 @@
 <div>
-    <form action="" method="get">
+    <form #details = "ngForm" action="" method="get" (ngSubmit)="displayData(details.value)" novalidate>
         <table align="center">
             <tr>
                 <th></th>
@@ -7,23 +7,23 @@
             </tr>
             <tr>
                 <td>    <label for="name">Name: </label>  <br> <br> </td>
-                <td>    <input type="text" name="name" id="name" size="35"  placeholder="Lastname Firstname Middlename"> <br><br>  </td>
+                <td>    <input type="text" name="name" id="name" size="35" [(ngModel)]="name"  placeholder="Lastname Firstname Middlename"> <br><br>  </td>
             </tr>
             <tr>
                 <td>    <label for="bdate">Birthdate</label> <br> <br> </td>
-                <td>    <input type="date" name="birthdate" id="birthdate"  placeholder="Birthdate"> <br> <br> </td>
+                <td>    <input type="date" name="birthdate" id="birthdate" [(ngModel)]="bdate"  placeholder="Birthdate"> <br> <br> </td>
             </tr>
             <tr>
                 <td>    <label for="address">Address</label> <br> <br> </td>
-                <td>    <textarea name="address" id="address"  cols="30" rows="5"></textarea> <br> <br> </td>
+                <td>    <textarea name="address" id="address" [(ngModel)]="address"  cols="30" rows="5"></textarea> <br> <br> </td>
             </tr>
             <tr>
                 <td>    <label for="contactno">Contact Number</label> <br> <br> </td>
-                <td>    <input type="number" name="contactno" id="contactno"> <br> <br> </td>
+                <td>    <input type="number" name="contactno" id="contactno" [(ngModel)]="contactno"> <br> <br> </td>
             </tr>
             <tr>
                 <td>    <label for="email">Email</label> <br> <br> <br> </td>
-                <td>    <input type="email" name="email" id="email"  size="30" placeholder="username@gmail.com"> <br> <br> </td>
+                <td>    <input type="email" name="email" id="email" [(ngModel)]="email"  size="30" placeholder="username@gmail.com"> <br> <br> </td>
             </tr>
             <tr>
                 <td> </td>
@@ -35,14 +35,14 @@
     </form>
 </div>
 
+<br>
+<br>
 
-
-
-<!-- <div *ngIf="display">
-    <table border="0">
+<div *ngIf="display===true">
+    <table border="0" align="center">
         <tr>
             <td>Name :</td>
-            <td name="showname">{{name}}</td>
+            <td name="showname" >{{name}}</td>
         </tr>
         <tr>
             <td>Birthdate :</td>
@@ -61,4 +61,4 @@
             <td name="showemail">{{email}}</td>
         </tr>
     </table>
-</div> -->
+</div>

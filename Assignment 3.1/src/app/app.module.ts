@@ -9,6 +9,7 @@ import { ArrayInComboComponent } from './array-in-combo/array-in-combo.component
 import { TextBoxAreaComponent } from './text-box-area/text-box-area.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 
+import {FormsModule} from '@angular/forms';
 
 const appRoutes = [
   {path: '*', component: AppRoutingModule},
@@ -33,7 +34,8 @@ const appRoutes = [
       appRoutes,
     ),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

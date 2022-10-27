@@ -9,6 +9,6 @@ var userSchema = mongoose.Schema({
     email: String,
 });
 
-var userModel = mongoose.model('User', userSchema, 'Users');
+var adminModel = mongoose.model('Admin', userSchema, 'Admins');
 
-module.exports = userModel;
+module.exports = adminModel;
