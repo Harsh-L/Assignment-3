@@ -15,15 +15,15 @@ router.get('/insert', (req,res) => {
 
 });
 
-router.get('/update', async (req,res) => {
+router.get('/update/:id', async (req,res) => {
 
 });
 
-router.get('/delete', async (req,res) => {
+router.get('/delete/:id', async (req,res) => {
 
 });
 
-router.get('/details', async (req,res) => {
+router.get('/details/:id', async (req,res) => {
 
 });
 
@@ -39,10 +39,10 @@ router.post('/insert', async (req,res) => {
 
 });
 
-router.post('/update', async (req,res) => {
+router.post('/update/:id', async (req,res) => {
 
 });
 
-router.post('/delete', async (req,res) => {
+router.post('/delete/:id', async (req,res) => {
 
 });
