@@ -1,5 +1,7 @@
 var router = require('express').Router();
-
+const Admin = require('../models/admin')
+const Seller = require('../models/seller')
+const Product = require('../models/product');
 
 router.get('/', async (req,res) => {
 
