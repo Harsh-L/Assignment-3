@@ -26,7 +26,7 @@ router.get('/login/user', async  (req,res) => {
 
     if(username && password) {
         let response = await userModel.find({username:username, password:password});
-        if(response.length === 1){
+        if(response.length === 1) {
             return res.json(sign({ username }))
         } else {
             return res.status(401).json('Invalid username or password')
