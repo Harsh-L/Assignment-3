@@ -34,7 +34,7 @@ export class ProductService {
         return this.http.get(`${this.uri}/update/${id}`);
     }
 
-    updateProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String, rating: Number, ratingCount: Number){
+    updateProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String){
         const obj = {
             name: name,
             description: description,
@@ -42,8 +42,6 @@ export class ProductService {
             details: details,
             seller: seller,
             images: images,
-            rating: rating,
-            ratingCount: ratingCount
         };
 
         this.http.put(`${this.uri}/update/${id}`, obj).subscribe(res => console.log('Updated'));
