@@ -16,7 +16,7 @@ export class ProductService {
         return this.http.get<Product[]>(`${this.uri}/`);
     }
 
-    addProduct(name: String, description: String, price: Number, details: String, seller: String, images: String, rating: Number, ratingCount: Number){
+    addProduct(name: String, description: String, price: Number, details: String, seller: String, images: String){
         const obj = {
             name: name,
             description: description,
@@ -24,8 +24,6 @@ export class ProductService {
             details: details,
             seller: seller,
             images: images,
-            rating: rating,
-            ratingCount: ratingCount
         };
         console.log(obj);
         
