@@ -86,10 +86,10 @@ router.post('/insert', async (req,res) => {
     }
 })
 
-router.post('/update/:id', async (req,res) => {
+router.put('/update/:id', async (req,res) => {
 
 })
 
-router.post('/delete/:id', async (req,res) => {
+router.delete('/delete/:id', async (req,res) => {
 
 })
