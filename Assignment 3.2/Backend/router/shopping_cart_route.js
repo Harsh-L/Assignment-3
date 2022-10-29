@@ -76,7 +76,14 @@ router.post('/logout', (req,res) => {
 })
 
 router.post('/insert', async (req,res) => {
-
+    try {
+        const data = req.body;
+        const product = new productModel({...data});
+        await product.save();
+        res.redirect('/')
+    } catch (error) {
+        res.status(500).send('internal server error')
+    }
 })
 
 router.post('/update/:id', async (req,res) => {
