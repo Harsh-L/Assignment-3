@@ -13,5 +13,5 @@ app.use(express.urlencoded({extended: true}));
 app.use('shopping-cart.in/', shopping_cart_router);
 
 app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}/shopping_cart`); 
+    console.log(`http://localhost:${PORT}/shopping_cart.in/`); 
 })
