@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use('shopping_cart.in');
+app.use('shopping-cart.in/', shopping_cart_router);
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}/shopping_cart`); 
