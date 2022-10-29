@@ -47,7 +47,21 @@ export class ProductService {
         this.http.put(`${this.uri}/update/${id}`, obj).subscribe(res => console.log('Updated'));
     }
 
-    deleteProduct(id: any){
+    showProduct(id: any){
         return this.http.delete(`${this.uri}/delete/${id}`);
     }
+
+    deleteProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String){
+        const obj = {
+            name: name,
+            description: description,
+            price: price,
+            details: details,
+            seller: seller,
+            images: images,
+        };
+
+        this.http.delete(`${this.uri}/delete/${id}`, id).subscribe(res => console.log('Deleted'));
+    }
+
 }

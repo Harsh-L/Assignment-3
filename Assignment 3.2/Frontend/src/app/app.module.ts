@@ -8,6 +8,7 @@ import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { ViewComponent } from './view/view.component';
+import { ShowComponent } from './show/show.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ViewComponent } from './view/view.component';
     InsertComponent,
     UpdateComponent,
     DeleteComponent,
-    ViewComponent
+    ViewComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
