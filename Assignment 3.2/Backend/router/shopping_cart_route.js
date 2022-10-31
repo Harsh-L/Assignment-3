@@ -22,6 +22,10 @@ router.get('/', async (req,res) => {
 })
 
 router.get('/login/user', async  (req,res) => {
+    // load login form
+})
+
+router.post('/login/user', async (req,res) => {
     let {username, password} = req.body
 
     if(username && password) {
@@ -36,11 +40,12 @@ router.get('/login/user', async  (req,res) => {
     }
 })
 
-router.post('/login/user', async (req,res) => {
-
+router.get('/login/seller', async  (req,res) => {
+    // load login form
 })
 
-router.get('/login/seller', async  (req,res) => {
+
+router.post('/login/seller', async (req,res) => {
     let {username, password} = req.body
     
     if(username && password) {
@@ -56,11 +61,8 @@ router.get('/login/seller', async  (req,res) => {
 })
 
 router.post('/logout', (req,res) => {
-
-})
-
-router.post('/login/seller', async (req,res) => {
-
+    req.header.authorization = '';
+    // redirecting to login
 })
 
 router.get('/details/:id', async (req,res) => {
@@ -87,16 +89,24 @@ router.get('/update/:id', async (req,res) => {
 })
 
 router.put('/update/:id', async (req,res) => {
-
+    try {
+        await productModel.findByIdAndUpdate({"_id": req.params.id}, req.body, {new: true}, (err, product) => {
+            if (err) return res.status(500).send("There was a problem updating.");  
+            res.status(200).send(book);
+        });
+        res.redirect('/')
+    } catch (error) {
+        res.status(500).send('internal server error')
+    }
 })
 
 router.get('/delete/:id', async (req,res) => {
-
+    
 })
 
 router.delete('/delete/:id', async (req,res) => {
     productModel.findByIdAndRemove({_id:req.params.id}, (err,product)=>{
         console.log(product);
-        res.send(book);
+        res.send(product);
     })
 })
