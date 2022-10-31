@@ -48,7 +48,7 @@ export class ProductService {
     }
 
     showProduct(id: any){
-        return this.http.delete(`${this.uri}/delete/${id}`);
+        return this.http.get(`${this.uri}/delete/${id}`);
     }
 
     deleteProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String){
