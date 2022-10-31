@@ -36,6 +36,10 @@ router.get('/login/user', async  (req,res) => {
     }
 })
 
+router.post('/login/user', async (req,res) => {
+
+})
+
 router.get('/login/seller', async  (req,res) => {
     let {username, password} = req.body
     
@@ -51,15 +55,11 @@ router.get('/login/seller', async  (req,res) => {
     }
 })
 
-router.get('/insert', (req,res) => {
-    
-})
-
-router.get('/update/:id', async (req,res) => {
+router.post('/logout', (req,res) => {
 
 })
 
-router.get('/delete/:id', async (req,res) => {
+router.post('/login/seller', async (req,res) => {
 
 })
 
@@ -67,12 +67,8 @@ router.get('/details/:id', async (req,res) => {
 
 })
 
-router.post('/login/user', async (req,res) => {
-
-})
-
-router.post('/logout', (req,res) => {
-
+router.get('/insert', (req,res) => {
+    
 })
 
 router.post('/insert', async (req,res) => {
@@ -86,10 +82,21 @@ router.post('/insert', async (req,res) => {
     }
 })
 
+router.get('/update/:id', async (req,res) => {
+
+})
+
 router.put('/update/:id', async (req,res) => {
 
 })
 
-router.delete('/delete/:id', async (req,res) => {
+router.get('/delete/:id', async (req,res) => {
 
+})
+
+router.delete('/delete/:id', async (req,res) => {
+    productModel.findByIdAndRemove({_id:req.params.id}, (err,product)=>{
+        console.log(product);
+        res.send(book);
+    })
 })
