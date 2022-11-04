@@ -1,1 +1,21 @@
-<p>show works!</p>
+
+    <div align="center">
+        <table align="center">
+            <th>
+                <td> Name </td>
+                <td> Description </td>
+                <td> Price </td>
+                <td> Details </td>
+                <td> Seller </td>
+            </th>
+            <tr *ngFor="let product of products">
+                <td> {{product.name}} </td>
+                <td> {{product.description}} </td>
+                <td> {{product.price}} </td>
+                <td> {{product.details}} </td>
+                <td> {{product.seller}} </td>
+                <td> <a [routerLink]="['/shopping_cart.in/update', product._id]">EDIT</a> </td>
+                <td> <button (click)="ondelete(product)">Delete</button> </td>
+            </tr>
+        </table>
+    </div>
