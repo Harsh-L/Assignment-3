@@ -4,7 +4,4 @@ export class Product{
     price: Number = 0;
     details: String = '';
     seller: String = '';
-    images: String = '';
-    rating: Number = 0;
-    ratingCount: Number = 0;
 }
