@@ -1,4 +1,4 @@
-export default class Product{
+export class Product{
     name: String='';
     description: String = '';
     price: Number = 0;

@@ -18,7 +18,6 @@ export class InsertComponent implements OnInit {
       price: ['', Validators.required],
       details: ['', Validators.required],
       seller: ['', Validators.required],
-      images: [[''], Validators.required],
     })
   }
 
@@ -27,8 +26,7 @@ export class InsertComponent implements OnInit {
       this.angForm.value.description, 
       this.angForm.value.price, 
       this.angForm.value.details,
-      this.angForm.value.seller,
-      this.angForm.value.images);
+      this.angForm.value.seller);
 
       this.router.navigate(['/']);
 

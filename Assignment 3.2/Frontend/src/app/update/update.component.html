@@ -66,17 +66,6 @@
                      </td>
                 </tr>
                 <tr>
-                    <td> <label for="image">Images</label> </td>
-                    <td> <input type="image" name="image" id="image" src="" alt="" fromControlName="image" #image [(ngModel)] = "product.image"> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['image'].errors != null && angForm.controls['image'].invalid && (angForm.controls['image'].dirty || angForm.controls['image'].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['image.errors['image'] != null" >
-                          Product Images are required.
-                        </div>
-                      </div>
-                     </td>
-                </tr>
-                <tr>
                     <td> </td>
                     <td> <button (click)="updateProduct()" [disabled]="angForm.invalid">Update Product</button> </td>
                 </tr>

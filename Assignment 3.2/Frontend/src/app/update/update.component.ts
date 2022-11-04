@@ -36,8 +36,7 @@ export class UpdateComponent implements OnInit {
       this.angForm.value.description, 
       this.angForm.value.price, 
       this.angForm.value.details,
-      this.angForm.value.seller,
-      this.angForm.value.images);
+      this.angForm.value.seller);
 
       this.router.navigate(['/']);
   }

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import Product from "./product";
+import { Product } from "./product";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -16,51 +16,36 @@ export class ProductService {
         return this.http.get<Product[]>(`${this.uri}/`);
     }
 
-    addProduct(name: String, description: String, price: Number, details: String, seller: String, images: String){
+    addProduct(name: String, description: String, price: Number, details: String, seller: String){
         const obj = {
             name: name,
             description: description,
             price: price,
             details: details,
             seller: seller,
-            images: images,
         };
         console.log(obj);
         
-        this.http.post(`${this.uri}`, obj).subscribe(res => console.log('Inserted'));
+        this.http.post(`${this.uri}/insert`, obj).subscribe(res => console.log('Inserted'));
     }
 
     editProduct(id: any){
         return this.http.get(`${this.uri}/update/${id}`);
     }
 
-    updateProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String){
+    updateProduct(id: any, name: String, description: String, price: Number, details: String, seller: String){
         const obj = {
             name: name,
             description: description,
             price: price,
             details: details,
             seller: seller,
-            images: images,
         };
 
         this.http.put(`${this.uri}/update/${id}`, obj).subscribe(res => console.log('Updated'));
     }
 
-    showProduct(id: any){
-        return this.http.get(`${this.uri}/delete/${id}`);
-    }
-
-    deleteProduct(id: any, name: String, description: String, price: Number, details: String, seller: String, images: String){
-        const obj = {
-            name: name,
-            description: description,
-            price: price,
-            details: details,
-            seller: seller,
-            images: images,
-        };
-
+    deleteProduct(id: any){
         this.http.delete(`${this.uri}/delete/${id}`, id).subscribe(res => console.log('Deleted'));
     }
 
