@@ -14,7 +14,7 @@ export class InsertComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private fb:FormBuilder, private ps: ProductService) { 
     this.angForm = this.fb.group({
       name: ['', Validators.required],
-      description: ['', Validators.nullValidator],
+      description: ['', Validators.required],
       price: ['', Validators.required],
       details: ['', Validators.required],
       seller: ['', Validators.required],

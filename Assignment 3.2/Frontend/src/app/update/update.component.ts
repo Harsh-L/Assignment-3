@@ -11,6 +11,7 @@ import { ProductService } from '../product.service';
 export class UpdateComponent implements OnInit {
   product: any = {};
   angForm: FormGroup;
+  
   constructor(private route: ActivatedRoute, private router: Router, private fb:FormBuilder, private ps: ProductService) { 
     this.angForm = this.fb.group({
       name: ['', Validators.required],

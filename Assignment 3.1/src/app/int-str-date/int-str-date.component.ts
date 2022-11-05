@@ -10,7 +10,7 @@ export class IntStrDateComponent implements OnInit {
   constructor() { }
   integer_data: Number = 10;
   string_data: String = 'Hello World';
-  date_data: Number = Date.now();
+  date_data: Date = new Date();
   ngOnInit(): void {
   }
 

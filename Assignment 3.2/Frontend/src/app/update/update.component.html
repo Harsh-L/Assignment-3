@@ -1,61 +1,26 @@
 
     <div align="center">
-        <form [formGroup]="angForm">
+        <form [formGroup]="angForm" novalidate>
             <table align="center">
                 <tr>
                     <td> <label for="name">Name</label> </td>
                     <td> <input type="text" name="name" id="name" fromControlName="name" #name [(ngModel)] = "product.name"> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['name'].errors != null && angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['name'].errors['required'] != null" >
-                          Product Name is required.
-                        </div>
-                      </div>
-                     </td>
                 </tr>
                 <tr>
                     <td> <label for="description">Description</label> </td>
                     <td> <textarea name="description" id="description" cols="30" rows="10" fromControlName="description" #description [(ngModel)] = "product.description"></textarea> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['description'].errors != null && angForm.controls['description'].invalid && (angForm.controls['description'].dirty || angForm.controls['description'].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['description].errors['description'] != null" >
-                          Product Description is required.
-                        </div>
-                      </div>
-                     </td>
                 </tr>
                 <tr>
                     <td> <label for="price">Price</label> </td>
                     <td> <input type="number" min="0" name="price" id="price" fromControlName="price" #price [(ngModel)] = "product.price"> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['price'].errors != null && angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['price'].errors['required'] != null" >
-                          Product Price is required.
-                        </div>
-                      </div>
-                     </td>
                 </tr>
                 <tr>
                     <td> <label for="details">details</label> </td>
                     <td> <input type="text" name="details" id="details" fromControlName="details" #details [(ngModel)] = "product.details"> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['details'].errors != null && angForm.controls['details'].invalid && (angForm.controls['details'].dirty || angForm.controls['details].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['details].errors['details'] != null" >
-                          Product Details is required.
-                        </div>
-                      </div>
-                     </td>
                 </tr>
                 <tr>
                     <td> <label for="seller">Seller</label> </td>
                     <td> <input type="text" name="seller" id="seller" fromControlName="seller" #seller [(ngModel)] = "product.seller"> </td>
-                    <td> 
-                        <div *ngIf="angForm.controls['seller'].errors != null && angForm.controls['seller'].invalid && (angForm.controls['seller'].dirty || angForm.controls['seller'].touched)" class="alert alert-danger">
-                        <div *ngIf="angForm.controls['seller].errors['seller'] != null" >
-                          Product Seller is required.
-                        </div>
-                      </div>
-                     </td>
                 </tr>
                 <tr>
                     <td> </td>
